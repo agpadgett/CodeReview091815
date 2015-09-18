@@ -42,7 +42,7 @@ $(document).ready(function() {
     var numberInput = $("input#number_input").val();
     var result = makesSong(numberInput);
 
-    $(".song").text(result);
+    $(".song").text(result.join(""));
 
     $("#result").show();
     event.preventDefault();
