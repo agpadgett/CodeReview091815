@@ -6,10 +6,25 @@ describe('countsDown', function() {
 
 describe('makesVerse', function(){
   it("turns a number into a verse from 99 Bottles of Beer", function(){
-    expect(makesVerse(10)).to.equal("10 bottles of beer on the wall, 10 bottles of beer. Take one down, pass it around, 9 bottles of beer on the wall");
+    expect(makesVerse(10)).to.equal("10 bottles of beer on the wall, 10"
+    +" bottles of beer. Take one down, pass it around, 9 bottles of beer on the wall. ");
   });
 
   it("returns a particular string if the number of beers is 1", function(){
-    expect(makesVerse(1)).to.equal("1 bottle of beer on the wall, 1 bottle of beer. Take it down, pass it around, no bottles of beer on the wall. No bottles of beer on the wall, no bottles of beer. Go to the store, buy some more, 99 bottles of beer on the wall.");
+    expect(makesVerse(1)).to.equal("1 bottle of beer on the wall, 1 bottle of beer. "
+    +"Take it down, pass it around, no bottles of beer on the wall. No bottles of beer on the wall,"
+    +" no bottles of beer. Go to the store, buy some more, 99 bottles of beer on the wall.");
+  });
+
+  it("returns a particular string if the number of beers is 2", function(){
+    expect(makesVerse(2)).to.equal("2 bottles of beer on the wall, 2 bottles of "
+    +"beer. Take 1 down, pass it around, 1 bottle of beer on the wall. ");
+  });
+});
+
+describe('makesSong', function(){
+  it('puts a song together', function(){
+    expect((makesSong(2))[0]).to.equal("2 bottles of beer on the wall, "
+    +"2 bottles of beer. Take 1 down, pass it around, 1 bottle of beer on the wall. ");
   });
 });
